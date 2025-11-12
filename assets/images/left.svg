@@ -1,0 +1,7 @@
+<svg id="left" xmlns="http://www.w3.org/2000/svg" width="31.93" height="31.93" viewBox="0 0 31.93 31.93">
+  <path id="Path_16306" data-name="Path 16306" d="M15.965,0A15.965,15.965,0,1,1,0,15.965,15.965,15.965,0,0,1,15.965,0Z" fill="#d9a935" opacity="0.3"/>
+  <g id="Group_3390" data-name="Group 3390" transform="translate(5.706 6.929)">
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="18" height="18" fill="none"/>
+    <path id="Icon_ion-ios-arrow-forward" data-name="Icon ion-ios-arrow-forward" d="M13.453,12.862,18.3,7.819a.977.977,0,0,0,0-1.346.9.9,0,0,0-1.3,0l-5.489,5.714a.98.98,0,0,0-.027,1.314L17,19.255a.894.894,0,0,0,1.3,0,.977.977,0,0,0,0-1.346Z" transform="translate(-5.431 -3.661)" fill="#eec643"/>
+  </g>
+</svg>
