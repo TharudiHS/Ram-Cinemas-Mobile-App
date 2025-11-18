@@ -17,18 +17,18 @@ class LoginPage extends StatelessWidget {
           // BACKGROUND IMAGE
           Positioned.fill(
             child: Image.asset(
-              "assets/images/background_image.png",
+              "assets/images/background_image.avif",
               fit: BoxFit.cover,
             ),
           ),
 
           //  BACKGROUND BLUR + BRIGHTNESS
-          Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
-              child: Container(color: AppColours.black.withOpacity(0.70)),
-            ),
-          ),
+          // Positioned.fill(
+          //   // child: BackdropFilter(
+          //   //   // filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
+          //   //   // child: Container(color: AppColours.black.withOpacity(0.70)),
+          //   // ),
+          // ),
 
           //  MAIN CONTENT
           SingleChildScrollView(
@@ -67,15 +67,17 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
+
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      const SizedBox(height: 20),
                       const Text(
                         "LOGIN",
                         style: TextStyles.size20Eurostileregular,
                       ),
 
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 30),
 
                       //  EMAIL FIELD
                       const CustomTextFormField(hintText: "Email address"),
@@ -88,7 +90,7 @@ class LoginPage extends StatelessWidget {
                         obscureText: true,
                       ),
 
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 20),
 
                       // FORGOT PASSWORD
                       Align(
@@ -99,7 +101,7 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
 
-                      const SizedBox(height: 15),
+                      const SizedBox(height: 25),
 
                       // LOGIN BUTTON
                       MainButton(
@@ -112,14 +114,14 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 15),
 
                 //OR DIVIDER
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 120,
+                      width: 150,
                       height: 1,
                       color: const Color(0xFF9A9A9A),
                     ),
@@ -127,7 +129,7 @@ class LoginPage extends StatelessWidget {
                     const Text("OR", style: TextStyles.size14Promptregular),
                     const SizedBox(width: 8),
                     Container(
-                      width: 120,
+                      width: 150,
                       height: 1,
                       color: const Color(0xFF9A9A9A),
                     ),
