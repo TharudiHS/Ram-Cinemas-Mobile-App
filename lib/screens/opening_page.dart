@@ -29,29 +29,41 @@ class _OpeningPageState extends State<OpeningPage> {
         builder: (context, constraints) {
           // Viewport size
           final screenWidth = constraints.maxWidth;
+          final screenHeight = constraints.maxHeight;
 
           // Design size
-          const designWidth = 412;
+          const designWidth = 412.0;
+          const designHeight = 892.0;
 
           // Scale factors
           final w = screenWidth / designWidth;
+          final h = screenHeight / designHeight;
 
           return Stack(
             fit: StackFit.expand,
             children: [
-              // Background
+              // Background image
               Image.asset(
                 'assets/images/background_image.png',
                 fit: BoxFit.cover,
               ),
 
-              //Center Logo
+              // Centered logo
               Center(
-                child: Image.asset(
-                  'assets/images/RAM_Logo.png',
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SizedBox(height: 24 * h),
 
-                  width: 200 * w,
-                  fit: BoxFit.contain,
+                    Image.asset(
+                      'assets/images/RAM_Logo.png',
+
+                      width: 200 * w,
+                      fit: BoxFit.contain,
+                    ),
+
+                    SizedBox(height: 16 * h),
+                  ],
                 ),
               ),
             ],
