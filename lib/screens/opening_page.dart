@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ram_cinemas/screens/account_screens/login_page.dart';
 import '../utils/app_colours.dart';
 
 class OpeningPage extends StatefulWidget {
@@ -14,10 +15,10 @@ class _OpeningPageState extends State<OpeningPage> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 5), () {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => const LoginPage()),
-      // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginPage()),
+      );
     });
   }
 
