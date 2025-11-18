@@ -13,7 +13,6 @@ class _OpeningPageState extends State<OpeningPage> {
   @override
   void initState() {
     super.initState();
-
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
@@ -26,50 +25,27 @@ class _OpeningPageState extends State<OpeningPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColours.black,
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          // Viewport size
-          final screenWidth = constraints.maxWidth;
-          final screenHeight = constraints.maxHeight;
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Background Image
+          Image.asset('assets/images/background_image.avif', fit: BoxFit.cover),
 
-          // Design size
-          const designWidth = 412.0;
-          const designHeight = 892.0;
-
-          // Scale factors
-          final w = screenWidth / designWidth;
-          final h = screenHeight / designHeight;
-
-          return Stack(
-            fit: StackFit.expand,
-            children: [
-              // Background image
-              Image.asset(
-                'assets/images/background_image.png',
-                fit: BoxFit.cover,
-              ),
-
-              // Centered logo
-              Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    SizedBox(height: 24 * h),
-
-                    Image.asset(
-                      'assets/images/RAM_Logo.png',
-
-                      width: 200 * w,
-                      fit: BoxFit.contain,
-                    ),
-
-                    SizedBox(height: 16 * h),
-                  ],
+          // Logo + Tagline
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  'assets/images/RAM_Logo.png',
+                  width: 200,
+                  fit: BoxFit.contain,
                 ),
-              ),
-            ],
-          );
-        },
+                const SizedBox(height: 12),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
