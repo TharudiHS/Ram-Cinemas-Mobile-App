@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ram_cinemas/components/main_button.dart';
 import 'package:ram_cinemas/components/text_form_field.dart';
+import 'package:ram_cinemas/screens/account_screens/forget_password_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -107,7 +108,12 @@ class LoginPage extends StatelessWidget {
                       MainButton(
                         title: "LOGIN",
                         onTap: () {
-                          print("Login pressed");
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ForgetPasswordPage(),
+                            ),
+                          );
                         },
                       ),
                     ],
