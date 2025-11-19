@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ram_cinemas/components/main_button.dart';
 import 'package:ram_cinemas/components/text_form_field.dart';
 import 'package:ram_cinemas/screens/account_screens/forget_password_page.dart';
+import 'package:ram_cinemas/screens/account_screens/registration_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -161,9 +162,19 @@ class LoginPage extends StatelessWidget {
                       "Don't you have an account yet? ",
                       style: TextStyles.size14Promptlight,
                     ),
-                    const Text(
-                      "Create New",
-                      style: TextStyles.size14Promptlightyellow,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegistrationPage(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "Create New",
+                        style: TextStyles.size14Promptlightyellow,
+                      ),
                     ),
                   ],
                 ),
