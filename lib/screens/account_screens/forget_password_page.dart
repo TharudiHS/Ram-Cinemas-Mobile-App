@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:ram_cinemas/components/main_button.dart';
 import 'package:ram_cinemas/components/text_form_field.dart';
+import 'package:ram_cinemas/screens/account_screens/login_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -105,9 +106,18 @@ class ForgetPasswordPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Back to ", style: TextStyles.size14Promptlight),
-                    const Text(
-                      "Sign in",
-                      style: TextStyles.size14Promptlightyellow,
+
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPage()),
+                        );
+                      },
+                      child: const Text(
+                        "Sign in",
+                        style: TextStyles.size14Promptlightyellow,
+                      ),
                     ),
                   ],
                 ),
