@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       height: 78,
       color: AppColours.almostBlack,
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -34,7 +34,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: const Icon(Icons.menu, color: AppColours.white, size: 30),
           ),
 
-          const SizedBox(width: 16),
+          const SizedBox(width: 20),
 
           //  BACK ARROW (Gold)
           if (showBackArrow)
