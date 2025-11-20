@@ -35,7 +35,7 @@ class MyAccountPage extends StatelessWidget {
                   "PROFILE INFORMATION",
                   style: TextStyles.size16Promptmediumwhite,
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 20),
 
                 // PROFILE DETAILS
                 _buildRow("First Name:", "Kanchani"),
@@ -106,12 +106,12 @@ class MyAccountPage extends StatelessWidget {
 
   Widget _buildRow(String label, String value) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.only(bottom: 18),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: 120,
+            width: 132,
             child: Text(label, style: TextStyles.size14Promptlight),
           ),
           Expanded(child: Text(value, style: TextStyles.size14Promptmeduim)),
