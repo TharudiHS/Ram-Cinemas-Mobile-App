@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ram_cinemas/components/main_button.dart';
 import 'package:ram_cinemas/components/text_form_field.dart';
+import 'package:ram_cinemas/screens/account_screens/login_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -53,7 +54,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     ],
                   ),
 
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 20),
 
                   Text(
                     "ENTER YOUR DETAILS BELOW TO REGISTER",
@@ -137,7 +138,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     obscureText: true,
                   ),
 
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 20),
 
                   // Already have account? Login
                   Row(
@@ -149,7 +150,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, "/login");
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginPage(),
+                            ),
+                          );
                         },
                         child: Text(
                           "Login",
@@ -159,7 +165,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     ],
                   ),
 
-                  const SizedBox(height: 28),
+                  const SizedBox(height: 20),
 
                   // Create Account Button
                   MainButton(
@@ -168,8 +174,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       print("Login pressed");
                     },
                   ),
-
-                  const SizedBox(height: 40),
                 ],
               ),
             ),
