@@ -75,8 +75,8 @@ class BottomNavBar extends StatelessWidget {
       },
       child: SvgPicture.asset(
         icon,
-        height: 28,
-        width: 28,
+        height: 25,
+        width: 25,
         colorFilter: ColorFilter.mode(
           isSelected ? AppColours.gold : AppColours.white,
           BlendMode.srcIn,
