@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ram_cinemas/components/main_button.dart';
 import 'package:ram_cinemas/components/text_form_field.dart';
 import 'package:ram_cinemas/screens/account_screens/forget_password_page.dart';
+import 'package:ram_cinemas/screens/account_screens/myaccount_page.dart';
 import 'package:ram_cinemas/screens/account_screens/registration_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
@@ -97,9 +98,19 @@ class LoginPage extends StatelessWidget {
                       // FORGOT PASSWORD
                       Align(
                         alignment: Alignment.centerRight,
-                        child: Text(
-                          "Forget Password",
-                          style: TextStyles.size12Promptregular,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ForgetPasswordPage(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            "Forget Password",
+                            style: TextStyles.size12Promptregular,
+                          ),
                         ),
                       ),
 
@@ -112,7 +123,7 @@ class LoginPage extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ForgetPasswordPage(),
+                              builder: (context) => const MyAccountPage(),
                             ),
                           );
                         },
