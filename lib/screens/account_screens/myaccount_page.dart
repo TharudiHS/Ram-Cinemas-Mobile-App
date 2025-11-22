@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ram_cinemas/components/app_bar.dart';
 import 'package:ram_cinemas/components/bottom_nav_bar.dart';
+import 'package:ram_cinemas/screens/account_screens/change_password_page.dart';
+import 'package:ram_cinemas/screens/account_screens/edit_profile_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -53,7 +55,14 @@ class MyAccountPage extends StatelessWidget {
 
                 //  EDIT PROFILE
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const EditProfilePage(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Edit Profile",
                     style: TextStyles.size14Promptlightgold.copyWith(
@@ -83,7 +92,14 @@ class MyAccountPage extends StatelessWidget {
                 const SizedBox(height: 10),
 
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChangePasswordPage(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Change Password",
                     style: TextStyles.size14Promptlightgold.copyWith(
