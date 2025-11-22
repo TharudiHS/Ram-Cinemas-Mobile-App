@@ -71,7 +71,13 @@ class TextStyles {
   static const TextStyle size14Promptmeduim = TextStyle(
     fontFamily: 'Prompt',
     fontSize: 14,
-    fontWeight: FontWeight.w400, //light
+    fontWeight: FontWeight.w500,
     color: AppColours.white,
+  );
+  static const TextStyle size16Promptmeduim = TextStyle(
+    fontFamily: 'Prompt',
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColours.mustard,
   );
 }
