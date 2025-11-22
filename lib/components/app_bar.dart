@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ram_cinemas/screens/side_bar.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -30,7 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           // MENU ICON
           GestureDetector(
-            onTap: onMenuTap,
+            onTap: onMenuTap ?? () => showSidebar(context),
             child: const Icon(Icons.menu, color: AppColours.white, size: 30),
           ),
 
