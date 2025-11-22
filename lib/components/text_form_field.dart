@@ -7,6 +7,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool obscureText;
   final TextEditingController? controller;
   final int maxLines;
+  final TextInputType keyboardType;
 
   const CustomTextFormField({
     super.key,
@@ -14,28 +15,31 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.controller,
     this.maxLines = 1,
+    this.keyboardType = TextInputType.text,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 332,
-      height: 46,
+    return Container(
+      width: double.infinity,
+      constraints: const BoxConstraints(minHeight: 46),
       child: TextFormField(
         controller: controller,
         obscureText: obscureText,
-        style: const TextStyle(color: Colors.white),
-        cursorColor: Colors.white,
+        maxLines: maxLines,
+        keyboardType: keyboardType,
+        style: const TextStyle(color: AppColours.gold),
+        cursorColor: AppColours.white,
         decoration: InputDecoration(
           filled: true,
-          fillColor: const Color(0xFF000000),
+          fillColor: AppColours.black,
 
           hintText: hintText,
           hintStyle: TextStyles.size16Promptregular,
 
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 12,
-            vertical: 10,
+            vertical: 12,
           ),
 
           enabledBorder: OutlineInputBorder(
