@@ -3,7 +3,7 @@ import 'package:ram_cinemas/components/app_bar.dart';
 import 'package:ram_cinemas/components/bottom_nav_bar.dart';
 import 'package:ram_cinemas/components/main_button.dart';
 import 'package:ram_cinemas/components/text_form_field.dart';
-import 'package:ram_cinemas/screens/terms_conditions_page.dart';
+import 'package:ram_cinemas/screens/Menu/terms_conditions_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
