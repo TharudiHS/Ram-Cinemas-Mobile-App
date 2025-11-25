@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ram_cinemas/components/app_bar.dart';
 import 'package:ram_cinemas/components/bottom_nav_bar.dart';
 import 'package:ram_cinemas/components/main_button.dart';
+import 'package:ram_cinemas/screens/showtimes_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -108,7 +109,17 @@ class MovieInnerPage extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            child: MainButton(title: "BUY TICKETS", onTap: () {}),
+            child: MainButton(
+              title: "BUY TICKETS",
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ShowTimesPage(),
+                  ),
+                );
+              },
+            ),
           ),
           const BottomNavBar(selectedIndex: 1),
         ],
