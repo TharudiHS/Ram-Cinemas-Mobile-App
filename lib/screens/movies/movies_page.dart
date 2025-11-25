@@ -4,6 +4,7 @@ import 'package:ram_cinemas/components/app_bar.dart';
 import 'package:ram_cinemas/components/bottom_nav_bar.dart';
 import 'package:ram_cinemas/components/second_button.dart';
 import 'package:ram_cinemas/data/model/movie_model.dart';
+import 'package:ram_cinemas/screens/movies/movies_inner_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -165,7 +166,15 @@ class MoviesPage extends StatelessWidget {
         const SizedBox(height: 8),
 
         // BUY TICKETS BUTTON
-        SecondButton(title: "BUY TICKETS", onTap: () {}),
+        SecondButton(
+          title: "BUY TICKETS",
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MovieInnerPage()),
+            );
+          },
+        ),
       ],
     );
   }
