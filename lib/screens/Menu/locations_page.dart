@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ram_cinemas/components/app_bar.dart';
 import 'package:ram_cinemas/components/bottom_nav_bar.dart';
-import 'package:ram_cinemas/components/main_button.dart';
+import 'package:ram_cinemas/components/second_button.dart';
 import 'package:ram_cinemas/screens/Menu/locations_inner_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
@@ -87,24 +87,21 @@ class LocationsPage extends StatelessWidget {
                 const SizedBox(height: 16),
 
                 //  DESCRIPTION
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Text(
                     "In the heart of Wattala, Ram Cinema promises an unforgettable cinematic experience that will ignite your senses. The theater is an abode of captivating movies, where you can delve...",
                     textAlign: TextAlign.center,
-                    style: TextStyles.size14Promptlight,
+                    style: TextStyles.size14Promptlight.copyWith(height: 2),
                   ),
                 ),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 6),
 
                 // READ MORE BUTTON
                 SizedBox(
-                  width: 172,
-                  height: 32,
-                  child: MainButton(
+                  child: SecondButton(
                     title: "READ MORE",
-
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
