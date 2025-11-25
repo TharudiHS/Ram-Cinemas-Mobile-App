@@ -15,6 +15,7 @@ class AppColours {
   static const Color gold80 = Color(0x80D9A935);
   static const Color gold85 = Color(0x85D9A935);
   static const Color mustard = Color(0xFF8E6B17);
+  static const Color lineColor = Color(0xFF4D3A11);
 
   // Gold / Yellow Variants
   static const Color gold = Color(0xFFD9A935);

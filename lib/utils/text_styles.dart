@@ -20,6 +20,12 @@ class TextStyles {
     fontWeight: FontWeight.w500,
     color: AppColours.white,
   );
+  static const TextStyle size20Promptgold = TextStyle(
+    fontFamily: 'Prompt',
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: AppColours.gold,
+  );
   static const TextStyle size16Promptregular = TextStyle(
     fontFamily: 'Prompt',
     fontSize: 16,
@@ -86,6 +92,12 @@ class TextStyles {
     fontWeight: FontWeight.w600, //semibold
     color: AppColours.black,
   );
+  static const TextStyle size16Promptsemiboldwhite = TextStyle(
+    fontFamily: 'Prompt',
+    fontSize: 16,
+    fontWeight: FontWeight.w600, //semibold
+    color: AppColours.white,
+  );
   static const TextStyle size16Promptsemiboldgold = TextStyle(
     fontFamily: 'Prompt',
     fontSize: 16,
@@ -101,6 +113,12 @@ class TextStyles {
   static const TextStyle size14Promptlight = TextStyle(
     fontFamily: 'Prompt',
     fontSize: 14,
+    fontWeight: FontWeight.w300, //light
+    color: AppColours.white,
+  );
+  static const TextStyle size10Promptlight = TextStyle(
+    fontFamily: 'Prompt',
+    fontSize: 10,
     fontWeight: FontWeight.w300, //light
     color: AppColours.white,
   );
@@ -127,5 +145,23 @@ class TextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w500,
     color: AppColours.mustard,
+  );
+  static const TextStyle size7Poppins = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 7,
+    fontWeight: FontWeight.w400,
+    color: AppColours.white,
+  );
+  static const TextStyle size40Poppins = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 40,
+    fontWeight: FontWeight.w400,
+    color: AppColours.white,
+  );
+  static const TextStyle size14Poppins = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColours.white,
   );
 }
