@@ -2,6 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ram_cinemas/screens/Menu/about_page.dart';
+import 'package:ram_cinemas/screens/Menu/locations_page.dart';
+import 'package:ram_cinemas/screens/Menu/offers_page.dart';
 import 'package:ram_cinemas/screens/Menu/signout_page.dart';
 import 'package:ram_cinemas/screens/Menu/terms_conditions_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
@@ -96,16 +98,37 @@ class _SideBarState extends State<SideBar> {
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
-                          _menuTile("assets/images/movie.svg", "MOVIES", () {}),
+                          _menuTile("assets/images/movie.svg", "MOVIES", () {
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => const OffersPage(),
+                            //   ),
+                            // );
+                          }),
                           _menuTile(
                             "assets/images/offer.svg",
                             "OFFERS & GIVEAWAYS",
-                            () {},
+                            () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const OffersPage(),
+                                ),
+                              );
+                            },
                           ),
                           _menuTile(
                             "assets/images/location.svg",
                             "LOCATIONS",
-                            () {},
+                            () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const LocationsPage(),
+                                ),
+                              );
+                            },
                           ),
                           _menuTile("assets/images/about.svg", "ABOUT", () {
                             Navigator.push(
