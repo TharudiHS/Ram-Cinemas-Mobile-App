@@ -32,6 +32,12 @@ class TextStyles {
     fontWeight: FontWeight.w500, //medium
     color: AppColours.gold,
   );
+  static const TextStyle size12Prompt = TextStyle(
+    fontFamily: 'Prompt',
+    fontSize: 12,
+    fontWeight: FontWeight.w500, //medium
+    color: AppColours.goldMedium,
+  );
   static const TextStyle size12PromptmediumgreyLight = TextStyle(
     fontFamily: 'Prompt',
     fontSize: 12,
