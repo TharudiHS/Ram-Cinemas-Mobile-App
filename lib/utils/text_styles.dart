@@ -8,6 +8,12 @@ class TextStyles {
     fontWeight: FontWeight.w400, //regular
     color: AppColours.white,
   );
+  static const TextStyle size24Eurostileregular = TextStyle(
+    fontFamily: 'Eurostile',
+    fontSize: 24,
+    fontWeight: FontWeight.w400, //regular
+    color: AppColours.white,
+  );
   static const TextStyle size20Promptwhite = TextStyle(
     fontFamily: 'Prompt',
     fontSize: 20,
