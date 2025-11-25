@@ -22,6 +22,7 @@ class AppColours {
   static const Color goldDark = Color(0xFFC2821D);
   static const Color bronze = Color(0xFFB8730F);
   static const Color yellow = Color(0xFFEEC643);
+  static const Color goldMedium = Color(0xFFCC991D);
 
   // Greys
   static const Color grey = Color(0xFF9A9A9A);
