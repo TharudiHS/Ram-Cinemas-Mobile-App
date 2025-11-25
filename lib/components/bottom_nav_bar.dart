@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ram_cinemas/screens/Menu/offers_page.dart';
 import 'package:ram_cinemas/screens/account_screens/login_page.dart';
 import 'package:ram_cinemas/screens/account_screens/myaccount_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
@@ -41,7 +42,7 @@ class BottomNavBar extends StatelessWidget {
               index: 2,
               icon: "assets/images/offer-19.svg",
               isSelected: selectedIndex == 2,
-              destination: const LoginPage(),
+              destination: const OffersPage(),
             ),
             _navItem(
               context,
