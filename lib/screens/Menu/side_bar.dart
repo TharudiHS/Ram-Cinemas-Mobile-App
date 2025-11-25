@@ -6,6 +6,7 @@ import 'package:ram_cinemas/screens/Menu/locations_page.dart';
 import 'package:ram_cinemas/screens/Menu/offers_page.dart';
 import 'package:ram_cinemas/screens/Menu/signout_page.dart';
 import 'package:ram_cinemas/screens/Menu/terms_conditions_page.dart';
+import 'package:ram_cinemas/screens/movies/movies_inner_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
 
@@ -99,12 +100,12 @@ class _SideBarState extends State<SideBar> {
                       child: Column(
                         children: [
                           _menuTile("assets/images/movie.svg", "MOVIES", () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => const OffersPage(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const MovieInnerPage(),
+                              ),
+                            );
                           }),
                           _menuTile(
                             "assets/images/offer.svg",
