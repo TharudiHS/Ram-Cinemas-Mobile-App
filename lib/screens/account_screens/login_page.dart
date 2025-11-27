@@ -1,10 +1,8 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ram_cinemas/components/main_button.dart';
 import 'package:ram_cinemas/components/text_form_field.dart';
 import 'package:ram_cinemas/screens/account_screens/forget_password_page.dart';
-import 'package:ram_cinemas/screens/account_screens/myaccount_page.dart';
 import 'package:ram_cinemas/screens/account_screens/registration_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
@@ -24,14 +22,6 @@ class LoginPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-
-          //  BACKGROUND BLUR + BRIGHTNESS
-          // Positioned.fill(
-          //   // child: BackdropFilter(
-          //   //   // filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
-          //   //   // child: Container(color: AppColours.black.withOpacity(0.70)),
-          //   // ),
-          // ),
 
           //  MAIN CONTENT
           SingleChildScrollView(
@@ -123,7 +113,7 @@ class LoginPage extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const MyAccountPage(),
+                              builder: (context) => const LoginPage(),
                             ),
                           );
                         },
