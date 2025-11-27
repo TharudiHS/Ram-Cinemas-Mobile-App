@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColours.black,
       appBar: const CustomAppBar(title: "HOME"),
-      bottomNavigationBar: const BottomNavBar(selectedIndex: 4),
+      bottomNavigationBar: const BottomNavBar(selectedIndex: 0),
 
       // BODY
       body: SingleChildScrollView(
