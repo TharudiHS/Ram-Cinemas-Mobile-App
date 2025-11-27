@@ -72,7 +72,39 @@ class UpcomingPage extends StatelessWidget {
             },
           ),
         ),
+        const SizedBox(height: 30),
+        Positioned(
+          bottom: 40,
+          left: 0,
+          right: 0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              miniGoldLine(isActive: false),
+              const SizedBox(width: 8),
+              miniGoldLine(isActive: true),
+              const SizedBox(width: 8),
+              miniGoldLine(isActive: false),
+              const SizedBox(width: 8),
+              miniGoldLine(isActive: false),
+              const SizedBox(width: 8),
+              miniGoldLine(isActive: false),
+            ],
+          ),
+        ),
       ],
+    );
+  }
+
+  // MINI GOLD LINE
+  Widget miniGoldLine({required bool isActive}) {
+    return Container(
+      width: 26,
+      height: 2,
+      decoration: BoxDecoration(
+        color: isActive ? AppColours.gold : AppColours.gold.withOpacity(0.25),
+        borderRadius: BorderRadius.circular(5),
+      ),
     );
   }
 
