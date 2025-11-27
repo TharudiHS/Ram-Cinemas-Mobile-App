@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ram_cinemas/screens/Menu/about_page.dart';
 import 'package:ram_cinemas/screens/Menu/locations_page.dart';
-import 'package:ram_cinemas/screens/Menu/offers_page.dart';
 import 'package:ram_cinemas/screens/Menu/signout_page.dart';
 import 'package:ram_cinemas/screens/Menu/terms_conditions_page.dart';
+import 'package:ram_cinemas/screens/menu/offers_giveaways_page.dart';
 import 'package:ram_cinemas/screens/movies/movies_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 import 'package:ram_cinemas/utils/text_styles.dart';
@@ -27,14 +27,6 @@ class _SideBarState extends State<SideBar> {
       color: Colors.transparent,
       child: Stack(
         children: [
-          // Background Blur Effect
-          Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
-              child: Container(color: Colors.black.withOpacity(0.15)),
-            ),
-          ),
-
           // Actual Sidebar
           Container(
             width: 292,
@@ -114,7 +106,8 @@ class _SideBarState extends State<SideBar> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const OffersPage(),
+                                  builder: (context) =>
+                                      const OffersAndGiveawayPage(),
                                 ),
                               );
                             },
