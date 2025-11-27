@@ -14,6 +14,12 @@ class TextStyles {
     fontWeight: FontWeight.w400, //regular
     color: AppColours.white,
   );
+  static const TextStyle size30Eurostileregular = TextStyle(
+    fontFamily: 'Eurostile',
+    fontSize: 30,
+    fontWeight: FontWeight.w400, //regular
+    color: AppColours.white,
+  );
   static const TextStyle size20Promptwhite = TextStyle(
     fontFamily: 'Prompt',
     fontSize: 20,
@@ -132,6 +138,12 @@ class TextStyles {
     fontFamily: 'Prompt',
     fontSize: 14,
     fontWeight: FontWeight.w300,
+    color: AppColours.gold,
+  );
+  static const TextStyle size8Promptgold = TextStyle(
+    fontFamily: 'Prompt',
+    fontSize: 8,
+    fontWeight: FontWeight.w500,
     color: AppColours.gold,
   );
   static const TextStyle size14Promptmeduim = TextStyle(
