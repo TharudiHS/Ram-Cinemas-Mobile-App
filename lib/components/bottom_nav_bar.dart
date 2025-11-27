@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ram_cinemas/screens/Menu/offers_page.dart';
-import 'package:ram_cinemas/screens/account_screens/login_page.dart';
 import 'package:ram_cinemas/screens/account_screens/myaccount_page.dart';
+import 'package:ram_cinemas/screens/home/home_page.dart';
+import 'package:ram_cinemas/screens/menu/offers_giveaways_page.dart';
 import 'package:ram_cinemas/screens/movies/movies_page.dart';
 import 'package:ram_cinemas/utils/app_colours.dart';
 
@@ -28,7 +28,7 @@ class BottomNavBar extends StatelessWidget {
               index: 0,
               icon: "assets/images/home-home-7.svg",
               isSelected: selectedIndex == 0,
-              destination: const LoginPage(),
+              destination: HomePage(),
             ),
             _navItem(
               context,
@@ -42,7 +42,7 @@ class BottomNavBar extends StatelessWidget {
               index: 2,
               icon: "assets/images/offer-19.svg",
               isSelected: selectedIndex == 2,
-              destination: const OffersPage(),
+              destination: const OffersAndGiveawayPage(),
             ),
             _navItem(
               context,
